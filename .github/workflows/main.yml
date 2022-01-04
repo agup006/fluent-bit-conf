@@ -1,0 +1,13 @@
+on: pull_request
+
+name: Fluent-linter
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - id: fluent_linter_action
+        uses: calyptia/fluent-linter-action@gg/use-example
+        with:
+          CALYPTIA_API_KEY: ${{ secrets.CALYPTIA_API_KEY }}
+          CONFIG_LOCATION_GLOB: 'https://github.com/agup006/fluent-bit-conf/blob/main/fluent-bit.conf'
