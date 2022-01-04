@@ -10,4 +10,4 @@ jobs:
         uses: calyptia/fluent-linter-action@gg/use-example
         with:
           CALYPTIA_API_KEY: ${{ secrets.CALYPTIA_API_KEY }}
-          CONFIG_LOCATION_GLOB: '/fluent-bit.conf'
+          CONFIG_LOCATION_GLOB: 'fluent-bit.conf'
